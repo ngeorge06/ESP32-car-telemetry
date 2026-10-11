@@ -38,17 +38,14 @@ cd firmware
 pio run --target upload
 ```
 
-SPI pins: MOSI GPIO23, MISO GPIO19, SCK GPIO18, CS GPIO5. Join the `TouaregDash` Wi-Fi network and open `http://192.168.4.1`. The Wi-Fi password is set in `main.cpp`, so change it.
+Join the `TouaregDash` Wi-Fi network and open `http://192.168.4.1`. The Wi-Fi password is set in `main.cpp`, so change it.
 
 ## Issues I faced
 
-**Corrupted CAN data.** A cheap MOSFET level converter between the 3.3 V ESP32 and the 5 V MCP2515 module corrupted the SPI data (frame IDs like `0x9FFFFFFF`). Loopback mode, which uses no car or cable, still showed the corruption, and wiring SPI directly gave clean data. The converter was most likely too slow for the SPI clock. I replaced it with a 1 kΩ / 2 kΩ divider on MISO, and the PCB uses a 74AHCT125 for MOSI, SCK and CS.
+**Corrupted CAN data.** A cheap MOSFET level converter between the 3.3 V ESP32 and the 5 V MCP2515 module corrupted the SPI data. Loopback mode, which uses no car or cable, still showed the corruption, and wiring SPI directly gave clean data. The converter was most likely too slow for the SPI clock. I replaced it with a resistor-based voltage divider on MISO, and the PCB uses a 74AHCT125 for MOSI, SCK and CS.
 
-**The handbrake fault codes.** Mode 03 and Mode 07 requests were answered by two ECUs (`0x7E8` and `0x7E9`), and both reported zero codes while the dash showed a check-engine light, EPC and a headlight warning. Passive listening and active scans (VW TP 2.0, UDS requests across `0x700` to `0x7BF`) found nothing from the body or brake modules. That fits VW's gateway design, and reading them would need manufacturer-specific diagnostics I couldn't get. So the original problem is unsolved.
-
-**Unsupported data.** My car doesn't report gear, oil temperature or engine torque, so the dashboard doesn't show them.
+**Unsupported data.** My car doesn't report gear, oil temperature or engine torque, so the dashboard doesn't show them. Unsuccessful requests are hidden from the dashboard
 
 ## Future ideas
 
-- Read the parking-brake module's fault codes with a proper diagnostic tool.
-- Fabricate the board after checking the footprints against a 1:1 printout.
+- Fabricate the board
