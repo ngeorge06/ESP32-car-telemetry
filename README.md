@@ -6,7 +6,7 @@ Tested on: 2016 VW Touareg (3.6 V6 petrol)
 
 <p align="center">
   <img src="docs/images/dashboard.png" height="320" alt="Live dashboard on a tablet">
-  <img src="docs/images/breadboard-in-car.png" height="320" alt="The breadboard version running in the car">
+  <img src="docs/images/breadboard_in_car.png" height="320" alt="The breadboard version running in the car">
 </p>
 
 ## What it does
