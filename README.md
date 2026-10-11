@@ -6,7 +6,7 @@ Tested on: 2016 VW Touareg (3.6 V6 petrol)
 
 <p align="center">
   <img src="docs/images/dashboard.png" height="320" alt="Live dashboard on a tablet">
-  <img src="docs/images/breadboard_in_car.png" height="320" alt="The breadboard version running in the car">
+  <img src="docs/images/car_breadboard.png" height="320" alt="The breadboard version running in the car">
 </p>
 
 ## What it does
@@ -20,8 +20,8 @@ Tested on: 2016 VW Touareg (3.6 V6 petrol)
 The breadboard version (ESP32 DevKit V1 + MCP2515 module) works in the car. The carrier PCB is a KiCad 10 design (2 layers, 130 × 44 mm) that plugs both boards into sockets and runs from the car's 12 V. **It is a design only, not fabricated or tested.** ERC and DRC report 0 errors and 0 warnings.
 
 <p align="center">
-  <img src="docs/images/pcb-layout.png" width="48%" alt="PCB layout with top and bottom copper">
-  <img src="docs/images/pcb-3d.png" width="48%" alt="3D render of the board">
+  <img src="docs/images/PCB.png" width="48%" alt="PCB layout with top and bottom copper">
+  <img src="docs/images/3D_model.png" width="48%" alt="3D render of the board">
 </p>
 
 ![Schematic](docs/images/schematic.png)
@@ -30,7 +30,6 @@ The breadboard version (ESP32 DevKit V1 + MCP2515 module) works in the car. The 
 - A 74AHCT125 buffer handles the 3.3 V to 5 V SPI lines, with a resistor divider on MISO.
 - Socket spacings are measured from my own boards, and the ESP32's USB and antenna ends hang over the board edge.
 
-Files: [schematic PDF](hardware/output/vehicle-telemetry.pdf), [bill of materials](hardware/output/bom.csv).
 
 ## Run it
 
