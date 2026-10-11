@@ -1,6 +1,6 @@
 # ESP-32 Car Telemetry Dashboard
 
-An ESP32-based system that parses live engine data via my car's OBD-II port and shows it on a dashboard you open on a phone or tablet. This repo also includes a [KiCad design](#Carrier-PCB) for a custom PCB that replaces my breadboard wiring.
+An ESP32-based system that parses live engine data via my car's OBD-II port and shows it on a dashboard you open on a phone or tablet. This repo also includes a [KiCad design](#Hardware) for a custom PCB that replaces my breadboard wiring.
 
 Tested on: 2016 VW Touareg (3.6 V6 petrol)
 
