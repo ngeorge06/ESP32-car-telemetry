@@ -1,17 +1,19 @@
-// ===================== include/VehicleData.h =====================
 #pragma once
 
+// everything the dashboard shows
 struct VehicleData {
-  volatile int rpm = 0;
-  volatile int speedKph = 0;
-  volatile int coolantTempC = 0;
-  volatile int intakeTempC = 0;
-  volatile int engineLoadPct = 0;
-  volatile int throttlePct = 0;
-  volatile float mafGramsPerSec = 0;
-  volatile bool mafSupported = false;
-  volatile int manifoldPressureKpa = 0;
-  volatile bool manifoldPressureSupported = false;
-  volatile int fuelLevelPct = 0;
-  volatile bool fuelLevelSupported = false;
+  int rpm = 0;
+  int speedKph = 0;
+  int coolantTempC = 0;
+  int intakeTempC = 0;
+  int engineLoadPct = 0;
+  int throttlePct = 0;
+
+  // these only show up on the dashboard if the car actually answers
+  float mafGramsPerSec = 0;
+  bool mafSupported = false;
+  int manifoldPressureKpa = 0;
+  bool manifoldPressureSupported = false;
+  int fuelLevelPct = 0;
+  bool fuelLevelSupported = false;
 };

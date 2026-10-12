@@ -271,10 +271,14 @@ void WebInterface::setData(VehicleData* data) {
 }
 
 void WebInterface::begin(const char* apSsid, const char* apPassword) {
-  WiFi.softAP(apSsid, apPassword);
-  Serial.print("AP started. Connect to WiFi: ");
+  // channel 1, not hidden, max 2 devices connected at once
+  if (!WiFi.softAP(apSsid, apPassword, 1, 0, 2)) {
+    Serial.println("Wi-Fi failed to start (the password needs to be at least 8 characters)");
+    return;
+  }
+  Serial.print("Wi-Fi started, connect to: ");
   Serial.println(apSsid);
-  Serial.print("Then visit: http://");
+  Serial.print("then open http://");
   Serial.println(WiFi.softAPIP());
 
   server.on("/", handleRoot);

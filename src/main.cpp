@@ -2,6 +2,7 @@
 #include "data.h"
 #include "reader.h"
 #include "interface.h"
+#include "secrets.h"
 
 VehicleData vehicleData;
 CANReader canReader;
@@ -13,7 +14,7 @@ void setup() {
   canReader.begin();
 
   webInterface.setData(&vehicleData);
-  webInterface.begin("ESP32", "12345678");
+  webInterface.begin(WIFI_SSID, WIFI_PASSWORD);
 }
 
 void loop() {

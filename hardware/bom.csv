@@ -1,0 +1,17 @@
+Reference,Value,Footprint,Quantity,Part
+C1,100nF,C_0805_2012Metric,1,"Ceramic capacitor, 0805"
+C2,220µF,CP_Radial_D6.3mm_P2.50mm,1,Panasonic EEU-FR1C221 (16 V)
+C3,680µF,CP_Radial_D12.5mm_P5.00mm,1,Panasonic EEU-FR1H681L (50 V)
+D1,SMBJ15A,D_SMB,1,SMBJ15A TVS diode
+"D2, D3",SS34,D_SMC,2,onsemi SS34 Schottky diode
+F1,1A,Fuse_1206_3216Metric,1,Littelfuse 0466001.NR (1 A fuse)
+J1,OBD-II Screw Terminal,"TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal",1,4-position 5.08 mm screw terminal
+J2,ESP32_LEFT,PinSocket_1x15_P2.54mm_Vertical,1,1x15 female header
+J3,ESP32_RIGHT,PinSocket_1x15_P2.54mm_Vertical,1,1x15 female header
+J4,Conn_01x02,PinSocket_1x02_P2.54mm_Vertical,1,1x2 female header
+J5,Conn_01x07,PinSocket_1x07_P2.54mm_Vertical,1,1x7 female header
+L1,33µH,L_Bourns_SRR1260,1,Bourns SRR1260-330M
+R1,1k,R_0805_2012Metric,1,"Resistor, 0805"
+R2,2k,R_0805_2012Metric,1,"Resistor, 0805"
+U1,LM2596S-5,TO-263-5_TabPin3,1,LM2596S-5.0 buck regulator
+U2,74AHCT125,SOIC-14_3.9x8.7mm_P1.27mm,1,"74AHCT125 buffer, SOIC-14"

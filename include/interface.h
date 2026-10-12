@@ -1,7 +1,6 @@
-// ===================== include/WebInterface.h =====================
-#pragma once
 #include "data.h"
 
+// wifi access point + web server
 class WebInterface {
 public:
   void begin(const char* apSsid, const char* apPassword);
