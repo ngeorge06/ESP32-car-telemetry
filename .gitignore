@@ -3,6 +3,9 @@
 
 # VS Code: local settings
 .vscode/*
+.vscode
+
+# To recommend extensions in VS Code (platformio-ide)
 !.vscode/extensions.json
 
 # wifi name and password
